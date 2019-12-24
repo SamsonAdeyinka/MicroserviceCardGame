@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volume:
+    - type: bind
+      source: ./nginx.conf
+      target: /etc/nginx/nginx.conf
+    ports:
+      target: 80
+      published: 80
+      protocol: tcp
+    depends_on:
+      flask_app
+
+    front-end:
+      build: ./application/
+      ports:
+        target: 5000
+        protocol: tcp
+
+    service-2:
+      build: ./service-2/
+
+    service-3:
+      build: ./service-3/
+
+    service-4:
+      build: ./service-4/
