@@ -1,6 +1,6 @@
 from application import db
 
-#Database for the deck of cards.
+# Database for the deck of cards.
 
 class Deck(db.Model):
     id = db.Column(db.Integer, primary_key=True)
