@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "template" %}
 {% block body_content %}
-  <h1>Game Page</h1>
-  <p>Welcome to the card game!</p>
-  <br><br>
-  <!-- button to start the game -->
-  {{ form.submit }}
+
+<h1>Welcome to the game</h1>
+
+<h3>Start the game</h3>
+
+<form action="" method="POST">
+  <div class="form-group">
+    {{ form.start }}
+  </div>
+</form>
+
 {% endblock body_content %}
