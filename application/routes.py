@@ -14,7 +14,7 @@ def home():
 
 @app.route('/page-1', method=['GET', 'POST'])
 def card():
-    form = CardColour():
+    form = CardColour()
     if request.method == 'POST':
         if request.form == 'black_sub':
             return render_template('page-2.html', tite='Page 2')
