@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import SubmitField
-from application.models import Decks
+from application.models import Deck
 
 class StartGame(FlaskForm):
     start = SubmitField('Start Game')
