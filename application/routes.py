@@ -1,7 +1,7 @@
 from flask import render_template, redirect, request
-application import app, db
-application.models import Decks
-application.forms import StartGame, CardColour, DrawCard
+from application import app, db
+from application.models import Decks
+from application.forms import StartGame, CardColour, DrawCard
 
 @app.route('/')
 
