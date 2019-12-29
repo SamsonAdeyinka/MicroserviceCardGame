@@ -22,7 +22,12 @@ def card():
             return render_template('page-2.html', title='Page 2')
     return render_template('page-1.html', tite='Page 1')
 
-@app.route('page-2', method=['GET', 'POST'])
+@app.route('/page-2', method=['GET', 'POST'])
 def draw():
     form = DrawCard()
-    
+    if request.form == 'POST':
+        return render_template('page-3', title='Page 3')
+
+@app.route('/page-3')
+def prize():
+    return render_template('page-3.html', title='Page 3')
