@@ -1,5 +1,5 @@
 INSERT INTO cards_db.deck (Colour, Shape, Number, Description, Points)
-VALUES (
+VALUES
   ("Black", "Spades", "1", "Ace of Spades", 41),
   ("Black", "Spades",	"2", "Two of Spades",	10),
   ("Black", "Spades", "3", "Three of Spades", 52),
@@ -51,5 +51,4 @@ VALUES (
   ("Red",	"Diamonds",	"10",	"Ten of Diamonds", 5),
   ("Red",	"Diamonds",	"J", "Jack of Diamonds", 19),
   ("Red",	"Diamonds",	"Q", "Queen of Diamonds",	17),
-  ("Red",	"Diamonds",	"K", "King of Diamonds", 4)
-);
+  ("Red",	"Diamonds",	"K", "King of Diamonds", 4);
