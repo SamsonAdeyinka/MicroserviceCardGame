@@ -10,16 +10,17 @@ def home():
     form = StartGame()
     if request.method == 'POST':
         return redirect(url_for('page-1'))
-    return render_template('home.html', title='Home', form=form)
+    else:
+        return render_template('home.html', title='Home', form=form)
 
 @app.route('/page-1', methods=['GET', 'POST'])
 def card():
     form = CardColour()
-    if request.method == 'POST':
-        if request.form == 'black_sub':
-            return render_template('page-2.html', tite='Page 2')
-        elif request.form == 'red_sub':
-            return render_template('page-2.html', title='Page 2')
+    # if request.method == 'POST':
+    #     if request.form == 'black_sub':
+    #         return redirect(url_for('page-2'))
+    #     elif request.form == 'red_sub':
+    #         return redirect(url_for('page-2'))
     return render_template('page-1.html', tite='Page 1', form=form)
 
 @app.route('/page-2', methods=['GET', 'POST'])

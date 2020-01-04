@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 {% block body_content %}
-  <h1>Hello There!</h1>
+<h1>Hello There!</h1>
 
-  <h2>Pick a card color:</h2>
-
+<h2>Pick a card color:</h2>
+<div class="form">
   <form action="" method="POST">
     {{ form.hidden_tag() }}
     <!-- Black Card Button -->
@@ -14,7 +14,6 @@
     <div class="form-group">
       {{ form.red_sub }}
     </div>
-
   </form>
-
+</div>
 {% endblock body_content %}
