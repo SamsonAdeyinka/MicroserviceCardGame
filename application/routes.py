@@ -5,11 +5,12 @@ from application.forms import StartGame, CardColour, DrawCard
 
 @app.route('/')
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/home')
 def home():
     form = StartGame()
-    if form.validate_on_submit():
-        return redirect(url_for('page-1'))
+    #if request.method == 'POST':
+    #if form.validate_on_submit():
+        #return redirect(url_for('card'))
 
     return render_template('home.html', title='Home', form=form)
 
@@ -27,7 +28,7 @@ def card():
 def draw():
     form = DrawCard()
     if request.form == 'POST':
-        return render_template('page-3', title='Page 3', form=form)
+        return render_template('page-2', title='Page 2', form=form)
 
 @app.route('/page-3')
 def prize():
