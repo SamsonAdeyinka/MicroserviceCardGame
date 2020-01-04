@@ -5,10 +5,10 @@ from application.forms import StartGame, CardColour, DrawCard
 
 @app.route('/')
 
-@app.route('/home', methods=['POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     form = StartGame()
-    if request.method == ['POST']:
+    if request.method == 'POST':
         return redirect(url_for('page-1'))
     return render_template('home.html', title='Home', form=form)
 
