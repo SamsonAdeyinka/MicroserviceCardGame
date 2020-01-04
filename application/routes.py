@@ -5,7 +5,7 @@ from application.forms import StartGame, CardColour, DrawCard
 
 @app.route('/')
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/home', methods=['POST'])
 def home():
     form = StartGame()
     if request.method == ['POST']:
