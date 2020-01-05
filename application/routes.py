@@ -2,6 +2,7 @@ from flask import render_template, redirect, request
 from application import app, db
 from application.models import Deck
 from application.forms import StartGame, CardColour, DrawCard
+from random import random
 
 @app.route('/')
 
@@ -23,6 +24,8 @@ def card():
     #     elif request.form == 'red_sub':
     #         return redirect(url_for('page-2'))
     return render_template('page-1.html', tite='Page 1', form=form)
+
+def random_card():
 
 @app.route('/page-2', methods=['GET', 'POST'])
 def draw():
