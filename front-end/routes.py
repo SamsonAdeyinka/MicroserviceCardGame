@@ -25,8 +25,6 @@ def card():
     #         return redirect(url_for('page-2'))
     return render_template('page-1.html', tite='Page 1', form=form)
 
-def random_card():
-
 @app.route('/page-2', methods=['GET', 'POST'])
 def draw():
     form = DrawCard()

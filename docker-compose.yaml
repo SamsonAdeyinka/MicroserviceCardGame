@@ -11,3 +11,12 @@ services:
     - target: 80
       published: 80
       protocol: tcp
+    depends_on:
+    - front-end
+
+  front-end:
+    build: ./application
+    container_name: front-end
+    ports:
+    - target: 5000
+      protocol: tcp
