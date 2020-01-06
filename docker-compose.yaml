@@ -19,12 +19,3 @@ services:
       ports:
         target: 5000
         protocol: tcp
-
-    service-2:
-      build: ./service-2/
-
-    service-3:
-      build: ./service-3/
-
-    service-4:
-      build: ./service-4/
