@@ -12,12 +12,27 @@ services:
       published: 80
       protocol: tcp
     depends_on:
-    - front-end
+    - front_end
 
-  front-end:
-    build: ./application
-    container_name: front-end
-    ports:
-    - target: 5000
-      published: 5001
-      protocol: tcp
+  front_end:
+    build: ./front_end
+    container_name: front_end
+    #ports:
+    #- target: 5000
+    #published: 5000
+    #protocol: tcp
+
+  service-2:
+    build: ./service-2
+    container_name: service-2
+
+  service-3:
+    build: ./service-3
+    container_name: service-3
+
+  service-4:
+    build: ./service-4
+    container_name: service-4
+    depends_on:
+    - service-2
+    - service-3

@@ -1,6 +1,6 @@
 # ignore virtualenv
 
 /venv/
-
+/.bin/
 /__pycache__/
 /application/__pycache__/
