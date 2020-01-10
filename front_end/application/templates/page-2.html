@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h3>Draw a random Card</h3>
+<div class="form">
+  <form action="/" method="POST">
+    <div class="form-group">
+      {{ form.hidden_tag() }}
+      {{ form.draw }}
+    </div>
+  </form>
+
+  {% for cardz in card %}
+  	<p>{{ cardz.Desciption }}
+  {% endfor %}
+
+</div>
+{% endblock body_content %}

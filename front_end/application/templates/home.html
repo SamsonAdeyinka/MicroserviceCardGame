@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<h1>Welcome to the game</h1>
+
+<h3>Start the game</h3>
+<div class="form">
+  <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+	    <h3><a href="{{ url_for('card') }}">Start Game!</a></h3>
+	    <!-- {{ form.start }} -->
+    </div>
+  </form>
+</div>
+{% endblock body_content %}

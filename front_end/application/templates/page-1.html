@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h1>Hello There!</h1>
+
+<h2>Pick a card color:</h2>
+<div class="form">
+  <form action="/" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.draw }}
+  </form>
+  <p>The card you drew is: {{ card  }}</p>
+  <p>The number you rolled is: {{ dice }}</p>
+</div>
+{% endblock body_content %}
