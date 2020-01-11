@@ -33,4 +33,4 @@ def draw():
             print("something wrong------------------------------------------------------------------")
             app.logger.error(serv4)
 
-    return render_template('page-1.html', title='Page 1', form=form, card=card, die=die, prize=prize)
+    return render_template('page-1.html', title='Page 1', form=form, prize=prize)
