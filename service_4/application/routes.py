@@ -9,8 +9,8 @@ def result():
     serv2 = requests.post("http://service_2:5002/service_2")
     point = serv2.json()['points']
 
-    serv2 = requests.post("http://service_2:5002/service_2")
-    card_des = serv2.json()['card']
+    serv21 = requests.post("http://service_2:5002/service_2")
+    card_des = serv21.json()['card']
 
     serv3 = requests.post("http://service_3:5003/service_3")
     roll = serv3.json()['roll']
