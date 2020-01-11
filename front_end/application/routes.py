@@ -14,7 +14,8 @@ def home():
 @app.route('/page-1', methods=['GET', 'POST'])
 def draw():
     form = DrawCard()
-
+    prize = ''
+    
     if form.is_submitted():
         #serv2 = requests.get("http://service_2:5002/service_2")
         #print("ok 1")
