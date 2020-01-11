@@ -43,9 +43,11 @@ def result():
 @app.route('/service_4/draw', methods=['POST'])
 def card_draw():
     serv2 = requests.post("http://service_2:5002/service_2/draw")
-    return serv2.json()['card_des']
+    card = serv2.json()['card_des']
+    return {'cards':'{card}'}
 
 @app.route('/service_4/roll', methods=['POST'])
 def dice_roll():
     serv3 = requests.post("http://service_3:5003/service_3")
-    return serv3.json()['roll']
+    roll = serv3.json()['roll']
+    return {'roll':'{roll}'}
