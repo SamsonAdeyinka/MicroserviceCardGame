@@ -29,7 +29,6 @@ def draw():
         #print("ok 3")
         #die = serv3.json()['roll_dice']
         #print("ok 4")
-
         serv4 = requests.post("http://service_4:5004/service_4")
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
