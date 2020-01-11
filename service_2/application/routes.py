@@ -20,4 +20,4 @@ def card_points():
 def card():
     query = Deck.query.filter_by(id=number).fisrt()
     card = query.Description
-    return {'card':'{}'.format(card)}
+    return {'card_des':'{}'.format(card)}

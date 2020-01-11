@@ -32,7 +32,7 @@ def draw():
         serv4 = requests.post("http://service_4:5004/service_4")
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
-            card = ser4.json()['card_des']
+            card = ser4.json()['cards']
             dice = ser4.json()['dice']
         #elif serv4.status_code == 500:
             #print("something wrong------------------------------------------------------------------")

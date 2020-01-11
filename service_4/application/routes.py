@@ -7,8 +7,8 @@ import requests
 @app.route('/service_4', methods=['POST'])
 def card():
     serv2 = requests.post("http://service_2:5002/service_2")
-    card_des = serv2.json()['card']
-    return {'card_des':'{}'.format(card_des)}
+    card_des = serv2.json()['card_des']
+    return {'cards':'{}'.format(card_des)}
 
 def dice():
     serv3 = requests.post("http://service_3:5003/service_3")
