@@ -17,26 +17,26 @@ def result():
 
     if points <= 78:
         prize_num = random.randint(1, 9)
-        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
-        prize = query.prize
+        query = Prize_gen.query.filter_byid=prize_num).first()
+        prize = query.Prize
 
     elif points >= 79 and points <= 156:
         prize_num = random.randint(10, 19)
-        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
-        prize = query.prize
+        query = Prize_gen.query.filter_by(id=prize_num).first()
+        prize = query.Prize
 
     elif points >= 157 and points <= 234:
         prize_num = random.randint(20, 33)
-        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
-        prize = query.prize
+        query = Prize_gen.query.filter_by(id=prize_num).first()
+        prize = query.Prize
 
     elif points >= 235 and points <= 317:
         prize_num = random.randint(34, 39)
-        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
-        prize = prize = query.prize
+        query = Prize_gen.query.filter_by(id=prize_num).first()
+        prize = prize = query.Prize
 
     elif points == 318:
-        query = Prize_gen.query.filter_by(prize_id=40).first()
-        prize = query.prize
+        query = Prize_gen.query.filter_by(id=40).first()
+        prize = query.Prize
 
     return {'prize':'{}'.format(prize)}
