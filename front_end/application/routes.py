@@ -24,4 +24,4 @@ def draw():
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
 
-    return render_template('page-1.html', title='Page 1', form=form, card_des=card, roll=roll, prize=prize)
+    return render_template('page-1.html', title='Page 1', form=form, card=card, roll=roll, prize=prize)
