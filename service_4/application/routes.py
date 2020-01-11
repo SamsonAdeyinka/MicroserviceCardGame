@@ -9,6 +9,9 @@ def result():
     serv2 = requests.post("http://service_2:5002/service_2")
     point = serv2.json()['points']
 
+    serv2 = requests.post("http://service_2:5002/service_2")
+    card_des = serv2.json()['card_des']
+
     serv3 = requests.post("http://service_3:5003/service_3")
     roll = serv3.json()['roll']
 
@@ -39,15 +42,3 @@ def result():
         prize = query.Prize
 
     return {'prize':'{}'.format(prize)}
-
-@app.route('/service_4/draw', methods=['POST'])
-def card_draw():
-    serv2 = requests.post("http://service_2:5002/service_2/draw")
-    card = serv2.json()['card_des']
-    return {'cards':f'{card}'}
-
-@app.route('/service_4/roll', methods=['POST'])
-def dice_roll():
-    serv3 = requests.post("http://service_3:5003/service_3")
-    roll = serv3.json()['roll']
-    return {'roll':f'{roll}'}

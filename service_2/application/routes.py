@@ -17,7 +17,6 @@ def card_points():
     point = query.Points
     return {'points':'{}'.format(point)}
 
-@app.route('/service_2/draw', methods=['POST'])
 def card_picked():
     query = Deck.query.filter_by(id=number).fisrt()
     card = query.Description
