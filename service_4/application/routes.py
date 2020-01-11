@@ -17,7 +17,7 @@ def result():
 
     if points <= 78:
         prize_num = random.randint(1, 9)
-        query = Prize_gen.query.filter_byid=prize_num).first()
+        query = Prize_gen.query.filter_by(id=prize_num).first()
         prize = query.Prize
 
     elif points >= 79 and points <= 156:
