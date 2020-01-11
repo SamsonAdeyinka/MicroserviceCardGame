@@ -1,5 +1,5 @@
 from flask import render_template, redirect, request
-#from application import app, db
+from application import app #, db
 #from application.models import Deck, Prize_gen
 from application.forms import DrawCard
 import random
