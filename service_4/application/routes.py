@@ -41,4 +41,7 @@ def result():
         query = Prize_gen.query.filter_by(id=40).first()
         prize = query.Prize
 
-    return {'prize':'{}'.format(prize)}
+    return {
+        'prize':'{}'.format(prize),
+        'card':'{}'.format(card_des)
+        }
