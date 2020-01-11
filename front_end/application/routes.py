@@ -19,11 +19,12 @@ def draw():
     prize = ''
 
     if form.is_submitted():
-        #serv2 = requests.get("http://service_2:5002/service_2")
-        #print("ok 1")
+        serv4 = requests.post("http://service_4:5004/service_2/draw")
+        card = serv4.card_draw()
         #card = serv2.json()['random_card']
         #print("ok 2")
-
+        serv4 = requests.post("http://service_4:5004/service_2/roll")
+        dice = serv4.dice_roll()
         #serv3 = requests.get("http://service_3:5003/service_3")
         #print("ok 3")
         #die = serv3.json()['roll_dice']
@@ -32,8 +33,6 @@ def draw():
         serv4 = requests.post("http://service_4:5004/service_4")
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
-            card = ser4.json()['cards']
-            dice = ser4.json()['dice']
         #elif serv4.status_code == 500:
             #print("something wrong------------------------------------------------------------------")
             #app.logger.error(serv4)

@@ -5,16 +5,6 @@ import random
 import requests
 
 @app.route('/service_4', methods=['POST'])
-def card_draw():
-    serv2 = requests.post("http://service_2:5002/service_2")
-    card_des = serv2.json()['card_des']
-    return card_des
-
-def dice():
-    serv3 = requests.post("http://service_3:5003/service_3")
-    roll = serv3.json()['roll']
-    return roll
-
 def result():
     serv2 = requests.post("http://service_2:5002/service_2")
     point = serv2.json()['points']
@@ -49,3 +39,13 @@ def result():
         prize = query.Prize
 
     return {'prize':'{}'.format(prize)}
+
+@app.route('/service_4/draw', methods=['POST'])
+def card_draw():
+    serv2 = requests.post("http://service_2:5002/service_2/draw")
+    return serv2.json()['card_des']
+
+@app.route('/service_4/roll', methods=['POST'])
+def dice_roll():
+    serv3 = requests.post("http://service_3:5003/service_3")
+    return serv3.json()['roll']
