@@ -1,6 +1,6 @@
 from flask import render_template, redirect, request
-from application import app, db
-from application.models import Deck, Prize_gen
+#from application import app, db
+#from application.models import Deck, Prize_gen
 from application.forms import DrawCard
 import random
 import requests
@@ -15,10 +15,6 @@ def home():
 def draw():
     form = DrawCard()
 
-    card = ''
-    die = ''
-    prize = ''
-
     if form.is_submitted():
         #serv2 = requests.get("http://service_2:5002/service_2")
         #print("ok 1")
@@ -30,10 +26,10 @@ def draw():
         #die = serv3.json()['roll_dice']
         #print("ok 4")
 
-        serv4 = requests.get("http://service_4:5004/service_4")
+        serv4 = requests.post("http://service_4:5004/service_4")
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
-        elif serv4.status_code == 500: 
+        elif serv4.status_code == 500:
             print("something wrong------------------------------------------------------------------")
             app.logger.error(serv4)
 

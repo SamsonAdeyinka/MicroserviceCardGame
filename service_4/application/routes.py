@@ -4,40 +4,39 @@ from application.models import Deck, Prize_gen
 import random
 import requests
 
-@app.route('/service_4', methods=['GET', 'POST'])
+@app.route('/service_4', methods=['POST'])
 def result():
 
-    card = 0
-    die = 0
-    prize = 0
+    serv2 = requests.post("http://service_2:5002/service_2")
+    point = serv2.json()['points']
 
+    serv3 = requests.post("http://service_3:5003/service_3")
+    roll = serv3.json()['roll']
 
-    serv2 = requests.get("http://service_2:5002/service_2")
-    card = serv2.json()['card']
-    
-    serv3 = requests.get("http://service_3:5003/service_3")
-    dice = serv3.json()['roll']
-
-    points = int(card) * int(dice)
+    points = int(point) * int(roll)
 
     if points <= 78:
         prize_num = random.randint(1, 9)
-        prize = Prize_gen.query.filter_by(id=prize_num).first()
+        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
+        prize = query.prize
 
     elif points >= 79 and points <= 156:
         prize_num = random.randint(10, 19)
-        prize = Prize_gen.query.filter_by(id=prize_num).first()
+        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
+        prize = query.prize
 
     elif points >= 157 and points <= 234:
         prize_num = random.randint(20, 33)
-        prize = Prize_gen.query.filter_by(id=prize_num).first()
+        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
+        prize = query.prize
 
     elif points >= 235 and points <= 317:
         prize_num = random.randint(34, 39)
-        prize = Prize_gen.query.filter_by(id=prize_num).first()
+        query = Prize_gen.query.filter_by(prize_id=prize_num).first()
+        prize = prize = query.prize
 
     elif points == 318:
-        prize = Prize_gen.query.filter_by(id=40).first()
+        query = Prize_gen.query.filter_by(prize_id=40).first()
+        prize = query.prize
 
-    return {'prize':f'{prize}'}
-
+    return {'prize':'{}'.format(prize)}
