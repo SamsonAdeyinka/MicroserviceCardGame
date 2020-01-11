@@ -9,10 +9,10 @@ def random_int():
     int = random.randint(1, 52)
     return int
 
-number = random_int()
 
 @app.route('/service_2', methods=['POST'])
 def card_points():
+    number = random_int()
     query = Deck.query.filter_by(id=number).first()
     point = query.Points
     return {'points':'{}'.format(point)}
