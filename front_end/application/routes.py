@@ -19,11 +19,11 @@ def draw():
     prize = ''
 
     if form.is_submitted():
-        serv4 = requests.post("http://service_4:5004/service_2/draw")
+        serv4 = requests.post("http://service_4:5004/service_4/draw")
         card = serv4.card_draw()
         #card = serv2.json()['random_card']
         #print("ok 2")
-        serv4 = requests.post("http://service_4:5004/service_2/roll")
+        serv4 = requests.post("http://service_4:5004/service_4/roll")
         dice = serv4.dice_roll()
         #serv3 = requests.get("http://service_3:5003/service_3")
         #print("ok 3")
