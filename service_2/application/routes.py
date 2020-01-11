@@ -17,7 +17,7 @@ def card_points():
     point = query.Points
     return {'points':'{}'.format(point)}
 
-def card():
+def card_picked():
     query = Deck.query.filter_by(id=number).fisrt()
     card = query.Description
     return {'card_des':'{}'.format(card)}

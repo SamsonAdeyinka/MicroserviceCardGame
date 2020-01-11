@@ -5,7 +5,7 @@ import random
 import requests
 
 @app.route('/service_4', methods=['POST'])
-def card():
+def card_draw():
     serv2 = requests.post("http://service_2:5002/service_2")
     card_des = serv2.json()['card_des']
     return {'cards':'{}'.format(card_des)}
