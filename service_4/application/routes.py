@@ -8,12 +8,12 @@ import requests
 def card_draw():
     serv2 = requests.post("http://service_2:5002/service_2")
     card_des = serv2.json()['card_des']
-    return {'cards':'{}'.format(card_des)}
+    return card_des
 
 def dice():
     serv3 = requests.post("http://service_3:5003/service_3")
     roll = serv3.json()['roll']
-    return {'dice:':'{}'.format(roll)}
+    return roll
 
 def result():
     serv2 = requests.post("http://service_2:5002/service_2")
