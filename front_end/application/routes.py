@@ -32,10 +32,10 @@ def draw():
         serv4 = requests.post("http://service_4:5004/service_4")
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
-            card = ser4.json()['card']
+            card = ser4.json()['card_des']
             dice = ser4.json()['dice']
         #elif serv4.status_code == 500:
             #print("something wrong------------------------------------------------------------------")
             #app.logger.error(serv4)
 
-    return render_template('page-1.html', title='Page 1', form=form, card=card, dice=dice, prize=prize)
+    return render_template('page-1.html', title='Page 1', form=form, card=card_des, dice=dice, prize=prize)
