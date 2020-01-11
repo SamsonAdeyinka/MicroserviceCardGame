@@ -19,7 +19,7 @@ def draw():
     roll = ''
     prize = ''
 
-    if form.is_submitted()
+    if form.is_submitted():
         serv4 = requests.post("http://service_4:5004/service_4")
         if serv4.status_code == 200:
             prize = serv4.json()['prize']
