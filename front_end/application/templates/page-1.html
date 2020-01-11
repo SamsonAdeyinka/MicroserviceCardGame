@@ -2,13 +2,15 @@
 {% block body_content %}
 <h1>Hello There!</h1>
 
-<h2>Pick a card color:</h2>
+<h2>Draw a card:</h2>
 <div class="form">
-  <form action="/" method="POST">
+  <form action="/page-1" method="POST">
     {{ form.hidden_tag() }}
     {{ form.draw }}
   </form>
-  <p>The card you drew is: {{ card  }}</p>
-  <p>The number you rolled is: {{ dice }}</p>
+  <p>The card you drew is: {{ card }}</p>
+  <p>The number you rolled is: {{ die }}</p>
 </div>
+<h3></h3><h4>{{ prize }}</h4>
+
 {% endblock body_content %}

@@ -1,14 +1,12 @@
-#from service_3 import app
-from random import random
+from flask import Flask, request, jsonify
+import random
 
-def dice():
-    roll = random.randint(1, 6)
-    return roll
+app = Flask(__name__)
 
-@app.route('/service_3', methods=['POST'])
+@app.route('/service_3', methods=['GET', 'POST'])
 def roll_dice():
-    roll = dice()
-    return {'die':f'{roll}'}
+    roll = random.randint(1, 6)
+    return {'roll':f'{roll}'}
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5003)
