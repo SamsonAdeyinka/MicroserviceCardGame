@@ -1,4 +1,4 @@
-from flask import FlasK
+from flask import Flask
 from application.models import Deck
 from application import app, db
 import random
