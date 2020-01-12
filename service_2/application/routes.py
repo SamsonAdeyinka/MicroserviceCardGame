@@ -1,9 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import FlasK
 from application.models import Deck
 from application import app, db
 import random
-from os import getenv
-
 
 def random_int():
     int = random.randint(1, 52)
