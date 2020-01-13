@@ -3,7 +3,7 @@ import unittest
 from flask_testing import TestCase
 from flask import url_for
 # import app
-import roll_dice
+# import roll_dice
 
 class TestBase(TestCase):
     def create_app(self):
