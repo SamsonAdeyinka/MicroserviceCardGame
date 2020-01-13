@@ -9,9 +9,6 @@ def result():
     serv2 = requests.post("http://service_2:5002/service_2")
     point = serv2.json()['points']
 
-    # serv21 = requests.post("http://service_2:5002/service_2")
-    # card_des = serv21.json()['card']
-
     serv3 = requests.post("http://service_3:5003/service_3")
     roll = serv3.json()['roll']
 
@@ -26,17 +23,16 @@ def result():
         prize = query.Prize
 
     elif points => 157 and points <= 234:
-        query = Prize_get.query.filter_by(id=20).first()
+        query = Prize_gen.query.filter_by(id=20).first()
         prize = query.Prize
 
     elif points => 235 and points <= 317:
-        query = Prize_get.query.filter_by(id=34).first()
+        query = Prize_gen.query.filter_by(id=34).first()
         prize = query.Prize
 
     elif points == 318:
-        query = Prize_get.query.filter_by(id=40).first()
+        query = Prize_gen.query.filter_by(id=40).first()
         prize = query.Prize
-
 
 #     if points <= 78:
 #         prize_num = random.randint(1, 9)
