@@ -5,7 +5,7 @@ from application.routes import card_points
 from flask import url_for
 # import app, db
 
-class TestBase(TestCase):
+class TestBase(unittest.TestCase):
     def create_app(self):
         config_name = 'testing'
         return
