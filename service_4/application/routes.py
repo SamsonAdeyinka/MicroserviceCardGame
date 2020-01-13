@@ -18,19 +18,19 @@ def result():
     points = int(point) * int(roll)
 
     if points <= 78:
-        query = Prize_gen.filter_by(id=1).first()
+        query = Prize_gen.query.filter_by(id=1).first()
         prize = query.Prize
     elif points >= 79 and points <= 156:
-        query = Prize_get.filter_by(id=10).first()
+        query = Prize_get.query.filter_by(id=10).first()
         prize = query.Prize
     elif points => 157 and points <= 234:
-        query = Prize_get.filter_by(id=20).first()
+        query = Prize_get.query.filter_by(id=20).first()
         prize = query.Prize
     elif points => 235 and points <= 317:
-        query = Prize_get.filter_by(id=34).first()
+        query = Prize_get.query.filter_by(id=34).first()
         prize = query.Prize
     elif points == 318:
-        query = Prize_get.filter_by(id=40).first()
+        query = Prize_get.query.filter_by(id=40).first()
         prize = query.Prize
 
 
