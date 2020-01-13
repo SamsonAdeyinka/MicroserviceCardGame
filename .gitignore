@@ -3,4 +3,15 @@
 /venv/
 /.bin/
 /__pycache__/
-/application/__pycache__/
+/service_2/application/__pycache__/
+/front_end/application/__pycache__/
+/front_end/application/template/__pycache__/
+/front_end/__pycache__/
+/service_2/__pycache__/
+/service_3/__pycache__/
+/service_4/__pycache__/
+/front_end/test/__pycache__/
+/service_2/test/__pycache__/
+/service_3/test/__pycache__/
+/service_4/test/__pycache__/
+/service_4/application/__pycache__/
