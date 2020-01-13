@@ -1,0 +1,8 @@
+- import_playbook: key-pair.yaml
+- import_playbook: install-docker.yaml
+- import_playbook: docker-registry.yaml
+- import_playbook: jenkins-user.yaml
+- import_playbook: public-key.yaml
+- import_playbook: private-key.yaml
+- import_playbook: install-jenkins.yaml
+- import_playbook: docker-swarm.yaml
