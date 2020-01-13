@@ -1,6 +1,6 @@
 import pytest
 import unittest
-# from flask_testing import TestCase
+from flask_testing import TestCase
 from flask import url_for
 # import app, db
 from application.routes import result
