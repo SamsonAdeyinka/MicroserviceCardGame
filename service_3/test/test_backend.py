@@ -1,7 +1,7 @@
 import pytest
 import unittest
 from flask_testing import TestCase
-from flask import abort, url_for
+from flask import url_for
 import app
 import roll_dice
 

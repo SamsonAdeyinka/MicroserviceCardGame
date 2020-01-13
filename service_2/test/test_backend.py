@@ -3,7 +3,7 @@ import unittest
 from flask_testing import TestCase
 from flask import url_for
 import app, db
-import application.routes import roll_dice
+import application.routes import card_points
 
 class TestBase(TestCase):
     def create_app(self):
