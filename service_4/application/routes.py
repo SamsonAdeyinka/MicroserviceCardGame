@@ -15,7 +15,7 @@ def result():
     serv3 = requests.post("http://service_3:5003/service_3")
     roll = serv3.json()['roll']
 
-    points = int(point) * int(roll) * 3
+    points = int(point) * int(roll)
 
     if points <= 78:
         prize_num = random.randint(1, 9)
