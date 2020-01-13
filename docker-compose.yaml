@@ -15,7 +15,7 @@ services:
     - front_end
 
   front_end:
-    image: 35.246.90.29:5000/stack_app
+    image: 35.246.90.29:5000/stack_app:${BUILD_NUMBER}
     build: ./front_end
     container_name: front_end
     # ports:
@@ -26,7 +26,7 @@ services:
     - service_4
 
   service_2:
-    image: 35.246.90.29:5000/stack_service_2
+    image: 35.246.90.29:5000/stack_service_2:${BUILD_NUMBER}
     build: ./service_2
     container_name: service_2
     # ports:
@@ -35,7 +35,7 @@ services:
     #   protocol: tcp
 
   service_3:
-    image: 35.246.90.29:5000/stack_service_3
+    image: 35.246.90.29:5000/stack_service_3:${BUILD_NUMBER}
     build: ./service_3
     container_name: service_3
     # ports:
@@ -44,7 +44,7 @@ services:
     #   protocol: tcp
 
   service_4:
-    image: 35.246.90.29:5000/stack_service_4
+    image: 35.246.90.29:5000/stack_service_4:${BUILD_NUMBER}
     build: ./service_4
     container_name: service_4
     # ports:
