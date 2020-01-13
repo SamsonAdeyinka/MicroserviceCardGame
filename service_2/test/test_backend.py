@@ -1,9 +1,9 @@
 import pytest
 import unittest
-from flask_testing import TestCase
+#from flask_testing import TestCase
+from application.routes import card_points
 from flask import url_for
 import app, db
-import application.routes import card_points
 
 class TestBase(TestCase):
     def create_app(self):
