@@ -8,7 +8,7 @@ from flask import url_for
 class TestBase(TestCase):
     def create_app(self):
         config_name = 'testing'
-        return
+        return app
 
 class testApp(TestBase):
     def test_page(self):
