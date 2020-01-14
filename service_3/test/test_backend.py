@@ -1,6 +1,6 @@
 import pytest
 from flask import url_for
-from flask_testinf import TestCase
+from flask_testing import TestCase
 import app
 
 class TestBase(TestCase):
