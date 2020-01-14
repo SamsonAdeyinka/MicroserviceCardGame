@@ -8,4 +8,19 @@ def test_page(self):
     self.assertEqual(response.status_code, 200)
 
 def test_roll_dice():
+    assert roll_dice() == {'roll': '1'}
+
+def test_roll_dice():
+    assert roll_dice() == {'roll': '2'}
+
+def test_roll_dice():
+    assert roll_dice() == {'roll': '3'}
+
+def test_roll_dice():
     assert roll_dice() == {'roll': '4'}
+
+def test_roll_dice():
+    assert roll_dice() == {'roll': '5'}
+
+def test_roll_dice():
+    assert roll_dice() == {'roll': '6'}
