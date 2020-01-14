@@ -1,14 +1,8 @@
 import pytest
-import unittest
 from flask_testing import TestCase
 from application.routes import card_points
 from flask import url_for
 # import app, db
-
-class TestBase(TestCase):
-    def create_app(self):
-        config_name = 'testing'
-        return
 
 class testApp(TestBase):
     def test_page(self):
