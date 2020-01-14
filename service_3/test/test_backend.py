@@ -1,6 +1,12 @@
 import pytest
 from flask import url_for
+from flask_testinf import TestCase
 from app import roll_dice
+
+class TestBase(TestCase):
+    def create_app(self):
+        config_name = "testing"
+        return app
 
 
 def test_page(self):
