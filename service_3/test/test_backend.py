@@ -1,7 +1,7 @@
 import pytest
 from flask import url_for
 from flask_testing import TestCase
-import app
+from application import app
 
 class TestBase(TestCase):
     def create_app(self):
@@ -10,7 +10,7 @@ class TestBase(TestCase):
 
 class TestService_3(TestBase):
     def test_page(self):
-        response = self.client.get(url_for('/service_3'))
+        response = self.client.get(url_for('service_3'))
         self.assertEqual(response.status_code, 200)
 
 # def test_roll_dice():
